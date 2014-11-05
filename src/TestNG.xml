@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+
+   <test name="FirefoxTest">
+      <parameter name="browserName" value="Firefox" />
+      <classes>
+             <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test>
+   
+  <!--  <test name="SafariTest">
+      <parameter name="browserName" value="Safari" />
+      <classes>
+             <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test> -->
+
+  <!--  <test name="ChromeTest">
+      <parameter name="browserName" value="Chrome" />
+      <classes>
+             <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test> -->
+
+  <!-- <test name="IETest">
+      <parameter name="browserName" value="InternetExplorer" />
+      <classes>
+            <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test> -->
+   
+ <!--  <test name="OperaTest">
+      <parameter name="browserName" value="Opera" />
+      <classes>
+            <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test> -->
+   
+   <!-- <test name="AndroidTest">
+      <parameter name="browserName" value="Android" />
+      <classes>
+            <class name="com.ldlapp.modules.LDL_Requestor_TestCases"/>
+      </classes>
+   </test> -->
+   
+   
+
+  <!-- Test -->
+  
+</suite> <!-- Suite -->

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	 <project name="LDL_Application_Automation (Default - )" default="main" basedir=".">
+	 <!--Define Path-->
+	 <path id="project-classpath">
+	    <fileset dir="./lib" includes="*.jar"/>
+	    <pathelement location="bin"/>
+	 </path>
+	            <target name="main" depends = "init, compile, run">
+	            </target>
+	 <!-- Initialization -->
+	            <target name="init">
+	                        <echo>starting init task</echo>
+	                        <delete dir="bin"/>
+	                        <mkdir dir="bin"/>
+	            </target>
+	 <!--Compile-->
+	            <target name="compile">
+	                        <javac srcdir="com" destdir="bin">
+	                                    <classpath>                            
+	                                        <fileset dir="./lib" includes="*.jar"/>
+	                                        <pathelement location="bin"/>                             
+	                                    </classpath>
+	                        </javac>
+	            </target>
+	 <!--Define TestNG task-->
+	 <taskdef name="testng" classname="org.testng.TestNGAntTask">
+	               <classpath>
+	                        <pathelement location="./lib/testng-6.8.8.jar"/>
+	               </classpath>
+	              </taskdef>
+	 <!--Execute TestNG testsuite -->
+	            <target name ="run">
+	             <testng outputdir="./test-output" classpathref="project-classpath"  useDefaultListeners="true"> 
+	       <xmlfileset dir="." includes="src/TestNG.xml"/>
+	               <!-- generate report title -->
+	                <sysproperty key="org.uncommons.reportng.title" value="Test Automation"/>
+	                <sysproperty key="org.uncommons.reportng.escape-output" value="false"/>
+	               </testng>
+	            </target>
+	 </project>
+
+
+

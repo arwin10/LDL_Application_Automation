@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browserName" value="Firefox"/>
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browserName" value="Firefox"/>
+    <classes>
+      <class name="com.ldlapp.modules.LDL_Requestor_TestCases">
+        <methods>
+          <include name="testCaseExecution"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ldlapp.modules.LDL_Requestor_TestCases -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

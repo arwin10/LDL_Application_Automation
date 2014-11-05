@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="oracle.oats.scripting.ui.ClasspathJarAssetContainer"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/testng-6.8.8.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/selenium-2.41.0/selenium-server-standalone-2.41.0.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-examples-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-excelant-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/poi-3.10-FINAL/poi-scratchpad-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/ArindamSarkar/CiscoConfidential/ArindamsWork/Learning_Selenium/selendroid-standalone-0.11.0-with-dependencies.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

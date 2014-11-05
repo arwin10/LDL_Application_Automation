@@ -1,0 +1,1 @@
+psexec \\10.65.150.163 -u PARTNERS\arinsark -p Weeds!8904 C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
