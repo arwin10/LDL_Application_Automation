@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="214357" started-at="2014-11-05T14:06:51Z" finished-at="2014-11-05T14:10:26Z">
+  <suite name="Suite" duration-ms="601427" started-at="2014-11-06T13:46:31Z" finished-at="2014-11-06T13:56:33Z">
     <groups>
     </groups>
-    <test name="VCOPS_FirefoxTest" duration-ms="214357" started-at="2014-11-05T14:06:51Z" finished-at="2014-11-05T14:10:26Z">
-      <class name="com.ldlapp.modules.LDL_VCOPS_TestCases">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_VCOPS_TestCases@164dbd5]" name="setUp" is-config="true" duration-ms="62049" started-at="2014-11-05T19:36:51Z" finished-at="2014-11-05T19:37:53Z">
+    <test name="LASOPS_FirefoxTest" duration-ms="601427" started-at="2014-11-06T13:46:31Z" finished-at="2014-11-06T13:56:33Z">
+      <class name="com.ldlapp.modules.LDL_Ops_TestCases">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_Ops_TestCases@9cb0f4]" name="setUp" is-config="true" duration-ms="128657" started-at="2014-11-06T19:16:31Z" finished-at="2014-11-06T19:18:40Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_VCOPS_TestCases@164dbd5]" name="testCaseExecution" duration-ms="152152" started-at="2014-11-05T19:37:53Z" finished-at="2014-11-05T19:40:25Z">
+        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_Ops_TestCases@9cb0f4]" name="testCaseExecution" duration-ms="472504" started-at="2014-11-06T19:18:40Z" finished-at="2014-11-06T19:26:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseExecution -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_VCOPS_TestCases@164dbd5]" name="tearDown" is-config="true" duration-ms="146" started-at="2014-11-05T19:40:25Z" finished-at="2014-11-05T19:40:26Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_Ops_TestCases@9cb0f4]" name="tearDown" is-config="true" duration-ms="257" started-at="2014-11-06T19:26:32Z" finished-at="2014-11-06T19:26:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ldlapp.modules.LDL_VCOPS_TestCases -->
-    </test> <!-- VCOPS_FirefoxTest -->
+      </class> <!-- com.ldlapp.modules.LDL_Ops_TestCases -->
+    </test> <!-- LASOPS_FirefoxTest -->
   </suite> <!-- Suite -->
 </testng-results>

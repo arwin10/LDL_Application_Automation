@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="tests">
   <parameter name="browserName" value="Firefox"/>
-  <test name="FirefoxTest(failed)" parallel="tests">
+  <test name="LASOPS_FirefoxTest(failed)" parallel="tests">
     <parameter name="browserName" value="Firefox"/>
     <classes>
-      <class name="com.ldlapp.modules.LDL_Requestor_TestCases">
+      <class name="com.ldlapp.modules.LDL_Ops_TestCases">
         <methods>
-          <include name="testCaseExecution"/>
           <include name="setUp"/>
+          <include name="testCaseExecution"/>
         </methods>
-      </class> <!-- com.ldlapp.modules.LDL_Requestor_TestCases -->
+      </class> <!-- com.ldlapp.modules.LDL_Ops_TestCases -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- LASOPS_FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

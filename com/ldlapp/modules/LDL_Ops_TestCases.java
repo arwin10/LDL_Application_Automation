@@ -34,7 +34,7 @@ import com.ldlapp.basecontroller.BaseController;
 import com.ldlapp.basecontroller.BaseControllerParallelExecution;
 import com.ldlapp.commonutilities.CommonUtilities;
 
-public class LDL_TC_TestCases {
+public class LDL_Ops_TestCases {
 	WebDriver driver;
 	int success_flag=1;
 	Properties p=null;
@@ -63,7 +63,7 @@ public class LDL_TC_TestCases {
 	    
 	    /*BaseController for Multiple Parallel Browser Execution*/
 		BaseControllerParallelExecution BController = new BaseControllerParallelExecution();
-    	moduleRecord=BController.initializeApplication("TC_Module","firstActions",DBUtilities,CUtilities,browserName);
+    	moduleRecord=BController.initializeApplication("LASOps_Module","firstActions",DBUtilities,CUtilities,browserName);
 		
 		/*BaseController for Single Browser Execution at a time*/
 		//BaseController BController = new BaseController();
@@ -94,28 +94,28 @@ public class LDL_TC_TestCases {
 		
 		System.out.println("--Inside testCaseExecution function--");
 		//LDLfirstAction();
-	    //LDLsearchRequestverification("LDL_TCsearchRequestverification");
-		//LDLHomePageVerification("LDL_TC_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
-		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTC_CreateNewCourseAndOfferingsInstructorLedVerification");
-		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_TCCreateNewCourseAndOfferingsWBTVerification");
-		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_TCCreateNewCourseAndOfferingsVODVerification");
-		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_TC_CreateNewCourseAndOfferingsEPEVerification");
-		//LDLCreateNewCourseAndOfferingsEPOVerification("LDL_TC_CreateNewCourseAndOfferingsEP0Verification");
-		//LDLCreateNewCourseAndOfferingsOJTVerification("LDL_TC_CreateNewCourseAndOfferingsOJTVerification");
-		//LDLCreateNewCourseAndOfferingsINLVerification("LDL_TC_CreateNewCourseAndOfferingsINLVerification");
-		//LDLCreateNewCourseAndOfferingsVCVerification("LDL_TC_CreateNewCourseAndOfferingsVCVerification");
-		//LDLCreateNewOtherLASRequestVerification("LDL_TC_CreateNewOtherLASRequestVerification");
-		//LDLUpdateExistingEMSCourseRequestVerification("LDL_TC_UpdateExistingEMSCourseRequestVerification");
-		//LDLCancelExistingEMSOfferingRequestVerification("LDL_TC_CancelExistingEMSOfferingRequestVerification");
-		//LDLcreateNewOfferingRequestVerification("LDL_TC_createNewOfferingRequestVerification");
-	    //LDLUpdateExistingEMSOfferingRequestVerification("LDL_TC_UpdateExistingEMSOfferingRequestVerification");
-		//LDLActionItemsVerification("LDL_TCActionItemsVerification");
-		//LDLActionItemsVerification("LDL_TCActionItems_CancelRequest_Verification");
-		//LDLActionItemsVerification("LDL_TCActionItems_SubmitToEMS_Verification"); /*If the request is of type other than 'Other Las Request' */
-		//LDLActionItemsVerification("LDL_TCActionItems_ReturnRequest_Verification");
-		//LDLActionItemsVerification("LDL_TCActionItems_AssignRequest_Verification");
-		//LDLActionItemsVerification("LDL_TCActionItems_SetupComplete_Verification"); 
-		//LDLActionItemsVerification("LDL_TCActionItems_CompleteRequest_Verification"); /*--Setup Complete Data is taking a lot of time to reflect in the table becuase of which testcase failing.--*/
+	    //LDLsearchRequestverification("LDL_OPSsearchRequestverification");
+		//LDLHomePageVerification("LDL_OPS_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
+		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLOPS_CreateNewCourseAndOfferingsInstructorLedVerification");
+		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_OPSCreateNewCourseAndOfferingsWBTVerification");
+		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_OPSCreateNewCourseAndOfferingsVODVerification");
+		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_OPS_CreateNewCourseAndOfferingsEPEVerification");
+		//LDLCreateNewCourseAndOfferingsEPOVerification("LDL_OPS_CreateNewCourseAndOfferingsEP0Verification");
+		//LDLCreateNewCourseAndOfferingsOJTVerification("LDL_OPS_CreateNewCourseAndOfferingsOJTVerification");
+		//LDLCreateNewCourseAndOfferingsINLVerification("LDL_OPS_CreateNewCourseAndOfferingsINLVerification");
+		LDLCreateNewCourseAndOfferingsVCVerification("LDL_OPS_CreateNewCourseAndOfferingsVCVerification");
+		//LDLCreateNewOtherLASRequestVerification("LDL_OPS_CreateNewOtherLASRequestVerification");
+		//LDLUpdateExistingEMSCourseRequestVerification("LDL_OPS_UpdateExistingEMSCourseRequestVerification");
+		//LDLCancelExistingEMSOfferingRequestVerification("LDL_OPS_CancelExistingEMSOfferingRequestVerification");
+		//LDLcreateNewOfferingRequestVerification("LDL_OPS_createNewOfferingRequestVerification");
+	    //LDLUpdateExistingEMSOfferingRequestVerification("LDL_OPS_UpdateExistingEMSOfferingRequestVerification");
+		//LDLActionItemsVerification("LDL_OPSActionItemsVerification");
+		//LDLActionItemsVerification("LDL_OPSActionItems_CancelRequest_Verification");
+		//LDLActionItemsVerification("LDL_OPSActionItems_SubmitToEMS_Verification"); /*If the request is of type other than 'Other Las Request' */
+		//LDLActionItemsVerification("LDL_OPSActionItems_ReturnRequest_Verification");
+		//LDLActionItemsVerification("LDL_OPSActionItems_AssignRequest_Verification");
+		//LDLActionItemsVerification("LDL_OPSActionItems_SetupComplete_Verification");
+		//LDLActionItemsVerification("LDL_OPSActionItems_CompleteRequest_Verification"); /*--Setup Complete Data is taking a lot of time to reflect in the table becuase of which testcase failing.--*/
 	}
 	 
 	public void LDLfirstAction() throws Exception{
@@ -7553,11 +7553,13 @@ public class LDL_TC_TestCases {
 					    CUtilities.clickLink(p.getProperty("fundeptPickerCell"), driver);
 					    Thread.sleep(2000); 
 					    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
-					    Thread.sleep(3000);
+					    Thread.sleep(2000);
+					    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+					    Thread.sleep(2000);
 					    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
-					    Thread.sleep(3000);
+					    Thread.sleep(2000);
 					    CUtilities.dialogclickOkButton(driver);
-					    Thread.sleep(3000);
+					    Thread.sleep(2000);
 					    CUtilities.clickLink(p.getProperty("TCLASRequestAttachmentLink"), driver);
 					    Thread.sleep(2000);
 					    String parentWindow= driver.getWindowHandle();
@@ -7611,8 +7613,8 @@ public class LDL_TC_TestCases {
 					
 					  CUtilities.clickLink(p.getProperty("myHomeLink"), driver);
 					  Thread.sleep(5000);
-					  CUtilities.dialogclickOkButton(driver);
-					  Thread.sleep(2000);
+					  //CUtilities.dialogclickOkButton(driver);
+					  //Thread.sleep(2000);
 					  CUtilities.logout(driver);
 					 
 				  }
@@ -7775,6 +7777,8 @@ public class LDL_TC_TestCases {
 					    Thread.sleep(2000);  
 					    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 					    Thread.sleep(3000);
+					    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+					    Thread.sleep(2000);
 					    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 					    Thread.sleep(3000);
 					    CUtilities.dialogclickOkButton(driver);
@@ -8517,6 +8521,8 @@ public class LDL_TC_TestCases {
 					    Thread.sleep(2000); 
 					    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 					    Thread.sleep(3000);
+					    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+					    Thread.sleep(2000);
 					    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 					    Thread.sleep(3000);
 					    CUtilities.dialogclickOkButton(driver);
@@ -8572,8 +8578,8 @@ public class LDL_TC_TestCases {
 					  
 					  CUtilities.clickLink(p.getProperty("myHomeLink"), driver);
 					  Thread.sleep(5000);
-					  CUtilities.dialogclickOkButton(driver);
-					  Thread.sleep(2000);
+					  //CUtilities.dialogclickOkButton(driver);
+					  //Thread.sleep(2000);
 					  CUtilities.logout(driver);
 					
 				  }
@@ -8734,11 +8740,13 @@ public class LDL_TC_TestCases {
 				    CUtilities.clickLink(p.getProperty("fundeptPickerCell"), driver);
 				    Thread.sleep(2000);  
 				    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
-				    Thread.sleep(3000);
+				    Thread.sleep(2000);
+				    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+				    Thread.sleep(2000);
 				    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
-				    Thread.sleep(3000);
+				    Thread.sleep(2000);
 				    CUtilities.dialogclickOkButton(driver);
-				    Thread.sleep(3000);
+				    Thread.sleep(2000);
 				    CUtilities.clickLink(p.getProperty("TCLASRequestAttachmentLink"), driver);
 				    Thread.sleep(2000);
 				    parentWindow= driver.getWindowHandle();
@@ -8801,7 +8809,7 @@ public class LDL_TC_TestCases {
 						Thread.sleep(2000);
 						CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 						Thread.sleep(2000);
-						CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
+						CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn3"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
 						Thread.sleep(2000);
 						
 						
@@ -8854,9 +8862,9 @@ public class LDL_TC_TestCases {
 						   System.out.println("Error Occured:webexProducerRequiredYesRadioButton doesn't exist.");
 						}
 						
-						if(driver.findElements(By.xpath(p.getProperty("webExSessionInformationDrpDwn"))).size()>0 && driver.findElement(By.xpath(p.getProperty("webExSessionInformationDrpDwn"))).isDisplayed())
+						if(driver.findElements(By.xpath(p.getProperty("webExSessionInformationDrpDwn3"))).size()>0 && driver.findElement(By.xpath(p.getProperty("webExSessionInformationDrpDwn3"))).isDisplayed())
 						{
-						 CUtilities.selectFromDropDownbyText(p.getProperty("webExSessionInformationDrpDwn"), map.get("WEBEX_SESSION_INFORMATION").toString(), driver);
+						 CUtilities.selectFromDropDownbyText(p.getProperty("webExSessionInformationDrpDwn3"), map.get("WEBEX_SESSION_INFORMATION").toString(), driver);
 					     Thread.sleep(2000);
 						}
 						else
@@ -9171,9 +9179,9 @@ public class LDL_TC_TestCases {
 						      
 						       CUtilities.fillText(p.getProperty("PONumberTextBox"), map.get("PO_NUMBER").toString(), driver);
 						       Thread.sleep(2000);
-						       CUtilities.fillText(p.getProperty("materialLocationTextBox"), map.get("MATERIAL_LOCATION").toString(), driver);
+						       CUtilities.fillText(p.getProperty("materialLocationTextBox4"), map.get("MATERIAL_LOCATION").toString(), driver);
 						       Thread.sleep(2000);
-						       CUtilities.fillText(p.getProperty("cateringDetailsTextBox"), map.get("CATERINGS_DETAILS").toString(), driver);
+						       CUtilities.fillText(p.getProperty("cateringDetailsTextBox4"), map.get("CATERINGS_DETAILS").toString(), driver);
 						       Thread.sleep(2000);
 						       
 						       CUtilities.clickLink(p.getProperty("addMaterialsLink"), driver);
@@ -9494,7 +9502,9 @@ public class LDL_TC_TestCases {
 				    CUtilities.clickLink(p.getProperty("fundeptPickerCell"), driver);
 				    Thread.sleep(2000);  
 				    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
-				    Thread.sleep(3000);
+				    Thread.sleep(2000);
+				    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+				    Thread.sleep(2000);
 				    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 				    Thread.sleep(3000);
 				    CUtilities.dialogclickOkButton(driver);
@@ -9561,7 +9571,7 @@ public class LDL_TC_TestCases {
 						
 						CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 						Thread.sleep(2000);
-						CUtilities.selectFromDropDownbyText(p.getProperty("updateExistingEMSOfferingParticipantCompletionDrpdwn"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
+						CUtilities.selectFromDropDownbyText(p.getProperty("updateExistingEMSOfferingParticipantCompletionDrpdwn3"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
 						Thread.sleep(2000);
 						CUtilities.fillText(p.getProperty("sessionStartDateTime"), map.get("SESSION_START_DATE_TIME").toString(), driver);
 						Thread.sleep(2000);
@@ -9579,7 +9589,7 @@ public class LDL_TC_TestCases {
 						Thread.sleep(2000);
 						CUtilities.clickLink(p.getProperty("facilitypicker"), driver);
 						Thread.sleep(2000);
-						CUtilities.fillText(p.getProperty("updateExistingEMSOfferingroomReservationDetTextBox"), map.get("ROOM_RESERVATION_DETAILS").toString(), driver);
+						CUtilities.fillText(p.getProperty("updateExistingEMSOfferingroomReservationDetTextBox3"), map.get("ROOM_RESERVATION_DETAILS").toString(), driver);
 						Thread.sleep(2000);
 						
 						CUtilities.clickLink(p.getProperty("surveyAddRow"), driver);
@@ -9651,7 +9661,7 @@ public class LDL_TC_TestCases {
 						     CUtilities.fillText(p.getProperty("TCsupportRequestDayofClassTextBox"), map.get("TC_SUPPORT").toString(), driver);
 						     Thread.sleep(2000);  
 						     
-						     CUtilities.clickLink(p.getProperty("TCOfferingAttachmentLinkId"), driver);
+						     CUtilities.clickLink(p.getProperty("TCOfferingAttachmentLinkId2"), driver);
 							 Thread.sleep(2000);
 							    parentWindow= driver.getWindowHandle();
 							    allWindows = driver.getWindowHandles();
@@ -9718,9 +9728,9 @@ public class LDL_TC_TestCases {
 						      
 						       CUtilities.fillText(p.getProperty("PONumberTextBox"), map.get("PO_NUMBER").toString(), driver);
 						       Thread.sleep(2000);
-						       CUtilities.fillText(p.getProperty("materialLocationTextBox"), map.get("MATERIAL_LOCATION").toString(), driver);
+						       CUtilities.fillText(p.getProperty("materialLocationTextBox3"), map.get("MATERIAL_LOCATION").toString(), driver);
 						       Thread.sleep(2000);
-						       CUtilities.fillText(p.getProperty("cateringDetailsTextBox"), map.get("CATERINGS_DETAILS").toString(), driver);
+						       CUtilities.fillText(p.getProperty("cateringDetailsTextBox3"), map.get("CATERINGS_DETAILS").toString(), driver);
 						       Thread.sleep(2000);
 						       
 						       CUtilities.clickLink(p.getProperty("addMaterialsLink"), driver);
@@ -9855,7 +9865,7 @@ public class LDL_TC_TestCases {
 					   Thread.sleep(2000);
 					   					   			  
 					   
-					   if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_CompleteRequest_Verification"))
+					   if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_CompleteRequest_Verification"))
 					   { CUtilities.selectFromDropDownbyText(p.getProperty("requestTableRequestStatusDrpDwn"),map.get("REQUEST_STATUS").toString(), driver);
 					     Thread.sleep(5000);
 					     CUtilities.selectFromDropDownbyText(p.getProperty("TCPageRowsPerPageDrpDwn"),"50", driver);
@@ -9893,7 +9903,7 @@ public class LDL_TC_TestCases {
 			            		
 			            	}
 			               
-			               if((testCaseName.equalsIgnoreCase("LDL_TCActionItemsVerification")||testCaseName.equalsIgnoreCase("LDL_TCActionItems_CancelRequest_Verification")||testCaseName.equalsIgnoreCase("LDL_TCActionItems_SubmitToEMS_Verification")||testCaseName.equalsIgnoreCase("LDL_TCActionItems_ReturnRequest_Verification"))||testCaseName.equalsIgnoreCase("LDL_TCActionItems_AssignRequest_Verification"))
+			               if((testCaseName.equalsIgnoreCase("LDL_OPSActionItemsVerification")||testCaseName.equalsIgnoreCase("LDL_OPSActionItems_CancelRequest_Verification")||testCaseName.equalsIgnoreCase("LDL_OPSActionItems_SubmitToEMS_Verification")||testCaseName.equalsIgnoreCase("LDL_OPSActionItems_ReturnRequest_Verification"))||testCaseName.equalsIgnoreCase("LDL_OPSActionItems_AssignRequest_Verification"))
 			               { if(tdElement.getText().equalsIgnoreCase("Assigned"))
 			                 {   
 			                	reqLink.click();
@@ -9903,7 +9913,7 @@ public class LDL_TC_TestCases {
 			                 }
 			               }
 			              
-			               if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_SetupComplete_Verification"))
+			               if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_SetupComplete_Verification"))
 			               {if(tdElement.getText().equalsIgnoreCase("Submitted To EMS"))
 			                {   
 			                	reqLink.click();
@@ -9913,7 +9923,7 @@ public class LDL_TC_TestCases {
 			                }
 			               }
 			               
-			               if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_CompleteRequest_Verification"))
+			               if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_CompleteRequest_Verification"))
 			               {if(tdElement.getText().equalsIgnoreCase("Setup Complete"))
 			                {   
 			                	reqLink.click();
@@ -9966,7 +9976,7 @@ public class LDL_TC_TestCases {
 					      CUtilities.clickButton(p.getProperty("takeOwnerShipButton2"), driver);
 						  Thread.sleep(2000);
 			         }
-			         else if (testCaseName.equalsIgnoreCase("LDL_TCActionItems_SubmitToEMS_Verification"))
+			         else if (testCaseName.equalsIgnoreCase("LDL_OPSActionItems_SubmitToEMS_Verification"))
 			         {  
 			        	 if(driver.findElements(By.xpath(p.getProperty("actionItemPageEditRequestButton"))).size()>0)		 
 			        	 {   
@@ -10011,7 +10021,7 @@ public class LDL_TC_TestCases {
 			        	 
 			         }
 			         
-			         else if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_CancelRequest_Verification"))
+			         else if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_CancelRequest_Verification"))
 			         {  		        	 
 						 CUtilities.clickButton(p.getProperty("actionItemPageCancelRequestButton"), driver);
 						 Thread.sleep(5000);
@@ -10026,7 +10036,7 @@ public class LDL_TC_TestCases {
 			        	 
 			         }
 			         
-			         else if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_ReturnRequest_Verification"))
+			         else if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_ReturnRequest_Verification"))
 			         {  
 			        
 						 CUtilities.clickButton(p.getProperty("actionItemPageReturnRequestButton"), driver);
@@ -10044,7 +10054,7 @@ public class LDL_TC_TestCases {
 			        	 
 			         }
 			         
-			         else if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_AssignRequest_Verification"))
+			         else if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_AssignRequest_Verification"))
 			         {  
 						 CUtilities.clickButton(p.getProperty("actionItemPageAssignRequestButton"), driver);
 						 Thread.sleep(5000);
@@ -10061,13 +10071,13 @@ public class LDL_TC_TestCases {
 			        	 
 			         }
 			         
-			         else if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_SetupComplete_Verification"))
+			         else if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_SetupComplete_Verification"))
 			         {  
-			        	 CUtilities.clickButton(p.getProperty("setUpCompleteButton"), driver);
+			        	 CUtilities.clickButton(p.getProperty("setUpCompleteButton3"), driver);
 						 Thread.sleep(5000);
 						 CUtilities.clickButton(p.getProperty("submitToLASCancelButton"), driver);
 						 Thread.sleep(2000);
-						 CUtilities.clickButton(p.getProperty("setUpCompleteButton"), driver);
+						 CUtilities.clickButton(p.getProperty("setUpCompleteButton3"), driver);
 						 Thread.sleep(2000);
 						 CUtilities.fillTextArea(p.getProperty("LDLCommentsSubmitToLASTextArea"), map.get("OFFERINGS_SPC_INST_LAS").toString(), driver);
 					     Thread.sleep(2000);
@@ -10075,7 +10085,7 @@ public class LDL_TC_TestCases {
 						 Thread.sleep(2000);
 			         }
 			         
-			         else if(testCaseName.equalsIgnoreCase("LDL_TCActionItems_CompleteRequest_Verification"))
+			         else if(testCaseName.equalsIgnoreCase("LDL_OPSActionItems_CompleteRequest_Verification"))
 			         {
 			        	 CUtilities.clickButton(p.getProperty("completeRequestButton"), driver);
 						 Thread.sleep(5000);

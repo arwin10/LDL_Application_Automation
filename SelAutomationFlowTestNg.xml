@@ -78,12 +78,20 @@
       </classes>
    </test> -->
    
-<test name="VCOPS_FirefoxTest">
+<!-- <test name="VCOPS_FirefoxTest">
       <parameter name="browserName" value="Firefox" />
       <classes>
              <class name="com.ldlapp.modules.LDL_VCOPS_TestCases"/>
       </classes>
-   </test>   
+   </test> -->  
+   
+ <test name="LASOPS_FirefoxTest">
+      <parameter name="browserName" value="Firefox" />
+      <classes>
+             <class name="com.ldlapp.modules.LDL_Ops_TestCases"/>
+      </classes>
+   </test>
+      
    
  <!--  <test name="IETest">
       <parameter name="browserName" value="InternetExplorer" />
