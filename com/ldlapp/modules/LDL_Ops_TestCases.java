@@ -96,14 +96,14 @@ public class LDL_Ops_TestCases {
 		//LDLfirstAction();
 	    //LDLsearchRequestverification("LDL_OPSsearchRequestverification");
 		//LDLHomePageVerification("LDL_OPS_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
-		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLOPS_CreateNewCourseAndOfferingsInstructorLedVerification");
+		LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLOPS_CreateNewCourseAndOfferingsInstructorLedVerification");
 		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_OPSCreateNewCourseAndOfferingsWBTVerification");
 		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_OPSCreateNewCourseAndOfferingsVODVerification");
 		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_OPS_CreateNewCourseAndOfferingsEPEVerification");
 		//LDLCreateNewCourseAndOfferingsEPOVerification("LDL_OPS_CreateNewCourseAndOfferingsEP0Verification");
 		//LDLCreateNewCourseAndOfferingsOJTVerification("LDL_OPS_CreateNewCourseAndOfferingsOJTVerification");
 		//LDLCreateNewCourseAndOfferingsINLVerification("LDL_OPS_CreateNewCourseAndOfferingsINLVerification");
-		LDLCreateNewCourseAndOfferingsVCVerification("LDL_OPS_CreateNewCourseAndOfferingsVCVerification");
+		//LDLCreateNewCourseAndOfferingsVCVerification("LDL_OPS_CreateNewCourseAndOfferingsVCVerification");
 		//LDLCreateNewOtherLASRequestVerification("LDL_OPS_CreateNewOtherLASRequestVerification");
 		//LDLUpdateExistingEMSCourseRequestVerification("LDL_OPS_UpdateExistingEMSCourseRequestVerification");
 		//LDLCancelExistingEMSOfferingRequestVerification("LDL_OPS_CancelExistingEMSOfferingRequestVerification");
@@ -763,6 +763,7 @@ public class LDL_Ops_TestCases {
 			}
 		 }	
         
+	
 	public void LDLCreateNewCourseAndOfferingsInstructorLedVerification(String testCaseName) throws Exception{
 			
 			try
@@ -815,6 +816,8 @@ public class LDL_Ops_TestCases {
 					    Thread.sleep(2000);  
 					    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 					    Thread.sleep(3000);
+					    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+					    Thread.sleep(2000);
 					    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 					    Thread.sleep(3000);
 					    CUtilities.dialogclickOkButton(driver);
@@ -1300,9 +1303,9 @@ public class LDL_Ops_TestCases {
                               							
 							
 						    CUtilities.clickButton(p.getProperty("saveDraftButtonlink"), driver);
-						    Thread.sleep(3000);
+						    Thread.sleep(5000);
 						    CUtilities.clickButton(p.getProperty("continueButtonLink"), driver);
-						    Thread.sleep(3000);
+						    Thread.sleep(5000);
 							
 							
 					    }
@@ -1314,6 +1317,7 @@ public class LDL_Ops_TestCases {
 					    
 					    if(driver.findElement(By.xpath(p.getProperty("offeringDetailsPage"))).isDisplayed())
 					    {
+					    	
 					    	CUtilities.clickLink(p.getProperty("addOfferingsButton"), driver);
 							Thread.sleep(2000);
 							CUtilities.clickLink(p.getProperty("instructorLEDDeliveryTypeLink"), driver);
@@ -1324,9 +1328,10 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000); 
 							CUtilities.clickLinkByClassName(p.getProperty("expandAllLink"), driver);
 							Thread.sleep(2000);
+							
 							CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 							Thread.sleep(2000);
-							CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
+							CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn3"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("sessionStartDateTime"), map.get("SESSION_START_DATE_TIME").toString(), driver);
 							Thread.sleep(2000);
@@ -1344,7 +1349,7 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000);
 							CUtilities.clickLink(p.getProperty("facilitypicker"), driver);
 							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("roomReservationDetTextBox"), map.get("ROOM_RESERVATION_DETAILS").toString(), driver);
+							CUtilities.fillText(p.getProperty("roomReservationDetTextBox3"), map.get("ROOM_RESERVATION_DETAILS").toString(), driver);
 							Thread.sleep(2000);
 							
 							CUtilities.clickLink(p.getProperty("surveyAddRow"), driver);
@@ -1362,49 +1367,17 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000); 
 							driver.switchTo().window(parentWindow);	 
 						    driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						    
-						   CUtilities.clickLink(p.getProperty("surveyDeleteLink"), driver);
-							Thread.sleep(2000); 
-							
-							CUtilities.clickLink(p.getProperty("surveyAddRow"), driver);
-							Thread.sleep(2000); 
-							  parentWindow= driver.getWindowHandle();
-							    allWindows = driver.getWindowHandles();
-							    for(String curWindow : allWindows){
-							        driver.switchTo().window(curWindow);
-							    }
-						    CUtilities.selectFromDropDownbyText(p.getProperty("surveyIddrpDown"), map.get("SURVEY_NAME").toString(), driver);
-						    Thread.sleep(2000);
-						    CUtilities.fillText(p.getProperty("surveyinstructionDrpdwn"), map.get("SURVEY_INSTRUCTION").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.clickLink(p.getProperty("surveySaveButton"), driver);
-							Thread.sleep(2000); 
-							driver.switchTo().window(parentWindow);	 
-						    driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						    
-						    CUtilities.clickLink(p.getProperty("surveyEditLink1"), driver);
-							Thread.sleep(2000);  
-							  parentWindow= driver.getWindowHandle();
-							    allWindows = driver.getWindowHandles();
-							    for(String curWindow : allWindows){
-							        driver.switchTo().window(curWindow);
-							    }
-						    
-						    CUtilities.selectFromDropDownbyText(p.getProperty("surveyIddrpDown"), map.get("SURVEY_NAME").toString(), driver);
-						    Thread.sleep(2000);
-						    CUtilities.fillText(p.getProperty("surveyinstructionDrpdwn"), map.get("SURVEY_INSTRUCTION").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.clickLink(p.getProperty("surveySaveButton"), driver);
-							Thread.sleep(2000); 
-							driver.switchTo().window(parentWindow);	 
-						    driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						    
+						  
+						  					    
 						    CUtilities.fillText(p.getProperty("openEnrollmentDateTxtBox"), map.get("OPEN_ENROLLEMENT_DATE").toString(), driver);
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("closeEnrollmentDateTxtBox"), map.get("CLOSE_BEFORE_ENROLLEMENT_DATE").toString(), driver);
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("stopAutoPromotionDateTxtBox"), map.get("STOP_AUTO_PROMOTION_DATE").toString(), driver);
 							Thread.sleep(2000);
+							
+							
+							//Application Issue Please kindly check before excecuting the testcase whether this field should be enabled or not.
 							
 							CUtilities.clickLink(p.getProperty("emsCredittoDeptPicker"), driver);
 							Thread.sleep(2000); 
@@ -1421,6 +1394,8 @@ public class LDL_Ops_TestCases {
 								Thread.sleep(2000); 
 								driver.switchTo().window(parentWindow);	 
 							    driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
+							
+							
 							
 							    CUtilities.fillText(p.getProperty("pricePerLearnerTextBox"), map.get("PRICE_PER_LEARNER").toString(), driver);
 								Thread.sleep(2000);
@@ -1446,7 +1421,7 @@ public class LDL_Ops_TestCases {
 							     CUtilities.fillText(p.getProperty("TCsupportRequestDayofClassTextBox"), map.get("TC_SUPPORT").toString(), driver);
 							     Thread.sleep(2000);  
 							     
-							     CUtilities.clickLink(p.getProperty("TCOfferingAttachmentLinkId"), driver);
+							     CUtilities.clickLink(p.getProperty("TCOfferingAttachmentLinkId2"), driver);
 								 Thread.sleep(2000);
 								    parentWindow= driver.getWindowHandle();
 								    allWindows = driver.getWindowHandles();
@@ -1488,50 +1463,7 @@ public class LDL_Ops_TestCases {
 								   driver.switchTo().window(parentWindow);	 
 								   driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
 								   
-								    CUtilities.clickLink(p.getProperty("contentDeleteButton"), driver);
-									   Thread.sleep(2000); 
-										
-									   	
-									   CUtilities.clickLink(p.getProperty("contentModuleAddRowLink"), driver);
-										Thread.sleep(2000); 
-										  parentWindow= driver.getWindowHandle();
-										    allWindows = driver.getWindowHandles();
-										    for(String curWindow : allWindows){
-										        driver.switchTo().window(curWindow);
-										    }
-							          CUtilities.fillText(p.getProperty("contentNameTextBox"), map.get("CONTENT_NAME").toString(), driver);
-							          Thread.sleep(2000);
-							          CUtilities.fillText(p.getProperty("contentURLTextBox"), map.get("CONTENT_URL").toString(), driver);
-							          Thread.sleep(2000);
-							          CUtilities.fillText(p.getProperty("contentInstructionTextBox"), map.get("CONTENT_INSTRUCTION").toString(), driver);
-							          Thread.sleep(2000);
-							          CUtilities.clickLink(p.getProperty("contenSaveButton"), driver);
-							          Thread.sleep(2000); 
-							          driver.switchTo().window(parentWindow);	 
-							          driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-									   
-								   
-								   
-							     CUtilities.clickLink(p.getProperty("contentEditButton"), driver);
-									Thread.sleep(2000); 
-									  parentWindow= driver.getWindowHandle();
-									    allWindows = driver.getWindowHandles();
-									    for(String curWindow : allWindows){
-									        driver.switchTo().window(curWindow);
-									    }
-						           CUtilities.fillText(p.getProperty("contentNameTextBox"), map.get("CONTENT_NAME").toString(), driver);
-						           Thread.sleep(2000);
-						           CUtilities.fillText(p.getProperty("contentURLTextBox"), map.get("CONTENT_URL").toString(), driver);
-						           Thread.sleep(2000);
-						           CUtilities.fillText(p.getProperty("contentInstructionTextBox"), map.get("CONTENT_INSTRUCTION").toString(), driver);
-						           Thread.sleep(2000);
-						           CUtilities.clickLink(p.getProperty("contenSaveButton"), driver);
-						           Thread.sleep(2000); 
-						           driver.switchTo().window(parentWindow);	 
-						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						           
-						           
-						       
+								 
 
 								    CUtilities.clickLink(p.getProperty("coltAddRowLink"), driver);
 											Thread.sleep(2000); 
@@ -1551,53 +1483,14 @@ public class LDL_Ops_TestCases {
 								   driver.switchTo().window(parentWindow);	 
 								   driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
 								   
-								   CUtilities.clickLink(p.getProperty("coltDeleteButton"), driver);
-									Thread.sleep(2000); 
-									
-							       CUtilities.clickLink(p.getProperty("coltAddRowLink"), driver);
-										Thread.sleep(2000); 
-										  parentWindow= driver.getWindowHandle();
-										    allWindows = driver.getWindowHandles();
-										    for(String curWindow : allWindows){
-										        driver.switchTo().window(curWindow);
-										    }
-							       CUtilities.fillText(p.getProperty("coltassessmentTextBox"), map.get("COLT_ASSESSMENT_NAME").toString(), driver);
-							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("coltIdTextBox"), map.get("COLT_ID").toString(), driver);
-							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("coltinstructionTextBox"), map.get("COLT_INSTRUCTION").toString(), driver);
-							       Thread.sleep(2000);
-							       CUtilities.clickLink(p.getProperty("coltSaveButton"), driver);
-							        Thread.sleep(2000); 
-							       driver.switchTo().window(parentWindow);	 
-							       driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));	
-								   
-
-								    CUtilities.clickLink(p.getProperty("coltEditButton"), driver);
-											Thread.sleep(2000); 
-											  parentWindow= driver.getWindowHandle();
-											    allWindows = driver.getWindowHandles();
-											    for(String curWindow : allWindows){
-											        driver.switchTo().window(curWindow);
-											    }
-								   CUtilities.fillText(p.getProperty("coltassessmentTextBox"), map.get("COLT_ASSESSMENT_NAME").toString(), driver);
-								   Thread.sleep(2000);
-								   CUtilities.fillText(p.getProperty("coltIdTextBox"), map.get("COLT_ID").toString(), driver);
-								   Thread.sleep(2000);
-								   CUtilities.fillText(p.getProperty("coltinstructionTextBox"), map.get("COLT_INSTRUCTION").toString(), driver);
-								   Thread.sleep(2000);
-								   CUtilities.clickLink(p.getProperty("coltSaveButton"), driver);
-								   Thread.sleep(2000); 
-								   driver.switchTo().window(parentWindow);	 
-								   driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-								   
+								
 								 
 							      
 							       CUtilities.fillText(p.getProperty("PONumberTextBox"), map.get("PO_NUMBER").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("materialLocationTextBox"), map.get("MATERIAL_LOCATION").toString(), driver);
+							       CUtilities.fillText(p.getProperty("materialLocationTextBox4"), map.get("MATERIAL_LOCATION").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("cateringDetailsTextBox"), map.get("CATERINGS_DETAILS").toString(), driver);
+							       CUtilities.fillText(p.getProperty("cateringDetailsTextBox4"), map.get("CATERINGS_DETAILS").toString(), driver);
 							       Thread.sleep(2000);
 							       
 							       CUtilities.clickLink(p.getProperty("addMaterialsLink"), driver);
@@ -1607,7 +1500,7 @@ public class LDL_Ops_TestCases {
 									    for(String curWindow : allWindows){
 									        driver.switchTo().window(curWindow);
 									    }
-	
+
 						           CUtilities.clickLink(p.getProperty("addMaterialSearchButton"), driver);
 						           Thread.sleep(2000); 
 						           CUtilities.clickLink(p.getProperty("addMaterialDataOption1"), driver);
@@ -1615,46 +1508,14 @@ public class LDL_Ops_TestCases {
 						           driver.switchTo().window(parentWindow);	 
 						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
 						           
-						           
-						           CUtilities.clickLink(p.getProperty("addMaterialsRemoveLink"), driver);
-						           Thread.sleep(2000); 
-						           
-						           CUtilities.clickLink(p.getProperty("addMaterialsLink"), driver);
-									Thread.sleep(2000); 
-									  parentWindow= driver.getWindowHandle();
-									    allWindows = driver.getWindowHandles();
-									    for(String curWindow : allWindows){
-									        driver.switchTo().window(curWindow);
-									    }
-	
-						           CUtilities.clickLink(p.getProperty("addMaterialSearchButton"), driver);
-						           Thread.sleep(2000); 
-						           CUtilities.clickLink(p.getProperty("addMaterialDataOption1"), driver);
-						           Thread.sleep(2000); 
-						           driver.switchTo().window(parentWindow);	 
-						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						           
-						           
-						           CUtilities.clickLink(p.getProperty("surveyPreviewLink"), driver);
-								   Thread.sleep(2000); 
-									  parentWindow= driver.getWindowHandle();
-									    allWindows = driver.getWindowHandles();
-									    for(String curWindow : allWindows){
-									       
-									        Thread.sleep(5000);
-									        driver.switchTo().window(curWindow);
-									    }
-									    Thread.sleep(5000); 
-						           driver.switchTo().window(parentWindow);	 
-						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
 						         
 						           CUtilities.fillTextArea(p.getProperty("offeringspclInstForLASTextArea"), map.get("OFFERINGS_SPC_INST_LAS").toString(), driver);
 							       Thread.sleep(2000);
 							     
 							       CUtilities.clickButton(p.getProperty("saveDraftButtonlink"), driver);
-								   Thread.sleep(3000);
+								   Thread.sleep(5000);
 								   CUtilities.clickButton(p.getProperty("continueButtonLink"), driver);
-								   Thread.sleep(3000);
+								   Thread.sleep(10000);
 								   
 								   CUtilities.clickButton(p.getProperty("offeringSaveDraftButton"), driver);
 								   Thread.sleep(3000);
@@ -1670,7 +1531,7 @@ public class LDL_Ops_TestCases {
 						           driver.switchTo().window(parentWindow);	 
 						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
 						           
-						           //Submit to LAS can be done by requestor only.
+						           //Requestor Can only Submit to LAS.
 								  /* CUtilities.clickButton(p.getProperty("offeringsSubmitToLASButton"), driver);
 								   Thread.sleep(2000);
 								   CUtilities.clickButton(p.getProperty("submitToLASCancelButton"), driver);
@@ -1680,8 +1541,8 @@ public class LDL_Ops_TestCases {
 								   CUtilities.fillTextArea(p.getProperty("LDLCommentsSubmitToLASTextArea"), map.get("OFFERINGS_SPC_INST_LAS").toString(), driver);
 							       Thread.sleep(2000);
 							       CUtilities.clickButton(p.getProperty("offeringsSubmitToLASButton2"), driver);
-								   Thread.sleep(2000);*/
-								   
+								   Thread.sleep(2000);
+								   */
 	       
 							
 					    }
@@ -1795,6 +1656,8 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -2306,7 +2169,7 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 							Thread.sleep(2000);
-							CUtilities.selectFromDropDownbyText(p.getProperty("WBTparticipantCompletionDrpdwn"), map.get("WBT_PARTICIPATION_COMPLETION").toString(), driver);
+							CUtilities.selectFromDropDownbyText(p.getProperty("WBTparticipantCompletionDrpdwn2"), map.get("WBT_PARTICIPATION_COMPLETION").toString(), driver);
 							Thread.sleep(2000);
 							
 							
@@ -2547,11 +2410,11 @@ public class LDL_Ops_TestCases {
 							      
 							       CUtilities.fillText(p.getProperty("vendorSKUTextBox"), map.get("VENDOR_SKU").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("vendorProtocolTextBox"), map.get("VENDOR_PROTOCOL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("vendorProtocolTextBox2"), map.get("VENDOR_PROTOCOL").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("AICCInternalHostedURLTextBox"), map.get("AICC_INTERNAL_HOSTED_URL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("AICCInternalHostedURLTextBox2"), map.get("AICC_INTERNAL_HOSTED_URL").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("AICCExternalHostedURLTextBox"), map.get("AICC_EXTERNAL_HOSTED_URL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("AICCExternalHostedURLTextBox2"), map.get("AICC_EXTERNAL_HOSTED_URL").toString(), driver);
 							       Thread.sleep(2000);
 						           
 						           CUtilities.clickLink(p.getProperty("WBTsurveyPreviewLink"), driver);
@@ -2714,6 +2577,8 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -3228,7 +3093,7 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 							Thread.sleep(2000);
-							CUtilities.selectFromDropDownbyText(p.getProperty("WBTparticipantCompletionDrpdwn"), map.get("WBT_PARTICIPATION_COMPLETION").toString(), driver);
+							CUtilities.selectFromDropDownbyText(p.getProperty("WBTparticipantCompletionDrpdwn2"), map.get("WBT_PARTICIPATION_COMPLETION").toString(), driver);
 							Thread.sleep(2000);
 							
 							
@@ -3469,11 +3334,11 @@ public class LDL_Ops_TestCases {
 							      
 							       CUtilities.fillText(p.getProperty("vendorSKUTextBox"), map.get("VENDOR_SKU").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("vendorProtocolTextBox"), map.get("VENDOR_PROTOCOL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("vendorProtocolTextBox2"), map.get("VENDOR_PROTOCOL").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("AICCInternalHostedURLTextBox"), map.get("AICC_INTERNAL_HOSTED_URL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("AICCInternalHostedURLTextBox2"), map.get("AICC_INTERNAL_HOSTED_URL").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("AICCExternalHostedURLTextBox"), map.get("AICC_EXTERNAL_HOSTED_URL").toString(), driver);
+							       CUtilities.fillText(p.getProperty("AICCExternalHostedURLTextBox2"), map.get("AICC_EXTERNAL_HOSTED_URL").toString(), driver);
 							       Thread.sleep(2000);
 						           
 						           CUtilities.clickLink(p.getProperty("WBTsurveyPreviewLink"), driver);
@@ -3636,6 +3501,9 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
+
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -4363,6 +4231,9 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
+
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -5091,6 +4962,9 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
+
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -5819,6 +5693,9 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
+
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -5916,7 +5793,7 @@ public class LDL_Ops_TestCases {
 							CUtilities.clickLink(p.getProperty("portfolioAddOkImg"), driver);
 							Thread.sleep(2000);
 							
-						    CUtilities.clickLink(p.getProperty("AddLanguageLink"), driver);
+						   CUtilities.clickLink(p.getProperty("AddLanguageLink"), driver);
 							Thread.sleep(2000);
 							   parentWindow= driver.getWindowHandle();
 							    allWindows = driver.getWindowHandles();
@@ -6545,6 +6422,9 @@ public class LDL_Ops_TestCases {
 						    Thread.sleep(2000);  
 						    CUtilities.fillText(p.getProperty("TCDeliveryServicefeeTxtBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
 						    Thread.sleep(3000);
+						    CUtilities.fillText(p.getProperty("vcOpsPriceTextBox"), map.get("DELIVERY_SERVICE_FEE").toString(), driver);
+						    Thread.sleep(2000);
+
 						    CUtilities.clickCheckbox(p.getProperty("expediteReqChkBox"), driver);
 						    Thread.sleep(3000);
 						    CUtilities.dialogclickOkButton(driver);
@@ -7069,8 +6949,21 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("offeringDescpTextBox"), map.get("OFFERING_DESCRIPTION").toString(), driver);
 							Thread.sleep(2000);
-							CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
+							CUtilities.selectFromDropDownbyText(p.getProperty("participantCompletionDrpdwn3"), map.get("PARTICIPATION_COMPLETION").toString(), driver);
 							Thread.sleep(2000);
+							
+							
+							/*The below mentioned details must appear in the app through course details page but not so. Please check.. */
+							CUtilities.fillText(p.getProperty("minClassSizeTextBox"), map.get("MINCLASSSIZE").toString(), driver);
+							Thread.sleep(2000);
+							CUtilities.fillText(p.getProperty("maxClassSizeTextBox"), map.get("MAXCLASSSIZE").toString(), driver);
+							Thread.sleep(2000);
+							CUtilities.fillText(p.getProperty("durationTextBox2"), map.get("DURATIONTEXTBOX").toString(), driver);
+							Thread.sleep(2000);
+							CUtilities.fillText(p.getProperty("waitlistClassSizeTextBox"), map.get("WAITLIST_CLASSSIZE").toString(), driver);
+							Thread.sleep(2000);
+							
+						
 							CUtilities.fillText(p.getProperty("sessionStartDateTime"), map.get("SESSION_START_DATE_TIME").toString(), driver);
 							Thread.sleep(2000);
 							CUtilities.fillText(p.getProperty("sessionEndDateTime"), map.get("SESSION_END_DATE_TIME").toString(), driver);
@@ -7081,30 +6974,105 @@ public class LDL_Ops_TestCases {
 							Thread.sleep(2000);
 							CUtilities.clickLink(p.getProperty("locationPicker"), driver);
 							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("facilityTextBox"), map.get("OFFERING_FACILITY").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.clickLink(p.getProperty("facilityLookup"), driver);
-							Thread.sleep(2000);
-							CUtilities.clickLink(p.getProperty("facilitypicker"), driver);
-							Thread.sleep(2000);
 							
+							//Defect in app Facility field not showing up.
 							
-							CUtilities.clickRadioButton(p.getProperty("webexProducerRequiredYesRadioButton"), driver);
-							Thread.sleep(2000);
-							CUtilities.selectFromDropDownbyText(p.getProperty("webExSessionInformationDrpDwn"), map.get("WEBEX_SESSION_INFORMATION").toString(), driver);
-						    Thread.sleep(2000);
-						    CUtilities.selectFromDropDownbyText(p.getProperty("webexPlatformDrpDwn"), map.get("WEBEX_PLATFORM").toString(), driver);
-						    Thread.sleep(2000);
-						    CUtilities.fillText(p.getProperty("WebExURLAttendeeLinkTextBox"), map.get("WEBEX_URL").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("WebExPasscodeTextBox"), map.get("WEBEX_PASSCODE").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("WebexOptionTextBox"), map.get("WEBEX_OPTION").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("WebexSessionIDTextBox"), map.get("WEBEX_SESSION_ID").toString(), driver);
-							Thread.sleep(2000);
-							CUtilities.fillText(p.getProperty("WebexhostKeyTextBox"), map.get("WEBEX_HOST_KEY").toString(), driver);
-							Thread.sleep(2000);
+							if(driver.findElements(By.xpath(p.getProperty("facilityTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("facilityTextBox"))).isDisplayed())
+							{CUtilities.fillText(p.getProperty("facilityTextBox"), map.get("OFFERING_FACILITY").toString(), driver);
+							 Thread.sleep(2000);
+							 CUtilities.clickLink(p.getProperty("facilityLookup"), driver);
+							 Thread.sleep(2000);
+							 CUtilities.clickLink(p.getProperty("facilitypicker"), driver);
+							 Thread.sleep(2000);
+							}
+							else
+							{
+							   success_flag=0;
+							   System.out.println("Error Occured:Facility TextBox doesn't exist.");
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("webexProducerRequiredYesRadioButton"))).size()>0 && driver.findElement(By.xpath(p.getProperty("webexProducerRequiredYesRadioButton"))).isDisplayed())
+							{
+							 CUtilities.clickRadioButton(p.getProperty("webexProducerRequiredYesRadioButton"), driver);
+							 Thread.sleep(2000);
+							}
+							else
+							{
+							   success_flag=0;
+							   System.out.println("Error Occured:webexProducerRequiredYesRadioButton doesn't exist.");
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("webExSessionInformationDrpDwn3"))).size()>0 && driver.findElement(By.xpath(p.getProperty("webExSessionInformationDrpDwn3"))).isDisplayed())
+							{
+							 CUtilities.selectFromDropDownbyText(p.getProperty("webExSessionInformationDrpDwn3"), map.get("WEBEX_SESSION_INFORMATION").toString(), driver);
+						     Thread.sleep(2000);
+							}
+							else
+							{
+							   success_flag=0;
+							   System.out.println("Error Occured:webExSessionInformationDrpDwn doesn't exist.");
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("webexPlatformDrpDwn"))).size()>0 && driver.findElement(By.xpath(p.getProperty("webexPlatformDrpDwn"))).isDisplayed())
+							{	
+						     CUtilities.selectFromDropDownbyText(p.getProperty("webexPlatformDrpDwn"), map.get("WEBEX_PLATFORM").toString(), driver);
+						     Thread.sleep(2000);
+							}
+							else
+							{
+							  success_flag=0;
+							  System.out.println("Error Occured:webexPlatformDrpDwn doesn't exist.");
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("WebExURLAttendeeLinkTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("WebExURLAttendeeLinkTextBox"))).isDisplayed())
+						    { CUtilities.fillText(p.getProperty("WebExURLAttendeeLinkTextBox"), map.get("WEBEX_URL").toString(), driver);
+							 Thread.sleep(2000);
+						    }
+							else
+							{
+								 success_flag=0;
+								 System.out.println("Error Occured:WebExURLAttendeeLinkTextBox doesn't exist.");	
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("WebExPasscodeTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("WebExPasscodeTextBox"))).isDisplayed())
+							{CUtilities.fillText(p.getProperty("WebExPasscodeTextBox"), map.get("WEBEX_PASSCODE").toString(), driver);
+							 Thread.sleep(2000);
+							}
+							else
+							{
+							  success_flag=0;
+							  System.out.println("Error Occured:WebExPasscodeTextBox doesn't exist.");	
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("WebexOptionTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("WebexOptionTextBox"))).isDisplayed())
+							{CUtilities.fillText(p.getProperty("WebexOptionTextBox"), map.get("WEBEX_OPTION").toString(), driver);
+							 Thread.sleep(2000);
+							}
+							else
+							{
+							 success_flag=0;
+							 System.out.println("Error Occured:WebexOptionTextBox doesn't exist.");	
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("WebexSessionIDTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("WebexSessionIDTextBox"))).isDisplayed())
+							{CUtilities.fillText(p.getProperty("WebexSessionIDTextBox"), map.get("WEBEX_SESSION_ID").toString(), driver);
+						   	 Thread.sleep(2000);
+							}
+							else
+							{
+							  success_flag=0;
+							  System.out.println("Error Occured:WebexSessionIDTextBox doesn't exist.");	
+							}
+							
+							if(driver.findElements(By.xpath(p.getProperty("WebexhostKeyTextBox"))).size()>0 && driver.findElement(By.xpath(p.getProperty("WebexhostKeyTextBox"))).isDisplayed())
+							{ CUtilities.fillText(p.getProperty("WebexhostKeyTextBox"), map.get("WEBEX_HOST_KEY").toString(), driver);
+							 Thread.sleep(2000);
+							}
+							else
+							{
+							 success_flag=0;
+							 System.out.println("Error Occured:WebexhostKeyTextBox doesn't exist.");	
+							}
 							
 							CUtilities.clickLink(p.getProperty("surveyAddRow"), driver);
 							Thread.sleep(2000); 
@@ -7351,9 +7319,9 @@ public class LDL_Ops_TestCases {
 							      
 							       CUtilities.fillText(p.getProperty("PONumberTextBox"), map.get("PO_NUMBER").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("materialLocationTextBox"), map.get("MATERIAL_LOCATION").toString(), driver);
+							       CUtilities.fillText(p.getProperty("materialLocationTextBox4"), map.get("MATERIAL_LOCATION").toString(), driver);
 							       Thread.sleep(2000);
-							       CUtilities.fillText(p.getProperty("cateringDetailsTextBox"), map.get("CATERINGS_DETAILS").toString(), driver);
+							       CUtilities.fillText(p.getProperty("cateringDetailsTextBox4"), map.get("CATERINGS_DETAILS").toString(), driver);
 							       Thread.sleep(2000);
 							       
 							       CUtilities.clickLink(p.getProperty("addMaterialsLink"), driver);
@@ -7363,7 +7331,7 @@ public class LDL_Ops_TestCases {
 									    for(String curWindow : allWindows){
 									        driver.switchTo().window(curWindow);
 									    }
-	
+
 						           CUtilities.clickLink(p.getProperty("addMaterialSearchButton"), driver);
 						           Thread.sleep(2000); 
 						           CUtilities.clickLink(p.getProperty("addMaterialDataOption1"), driver);
@@ -7382,7 +7350,7 @@ public class LDL_Ops_TestCases {
 									    for(String curWindow : allWindows){
 									        driver.switchTo().window(curWindow);
 									    }
-	
+
 						           CUtilities.clickLink(p.getProperty("addMaterialSearchButton"), driver);
 						           Thread.sleep(2000); 
 						           CUtilities.clickLink(p.getProperty("addMaterialDataOption1"), driver);
@@ -7425,9 +7393,10 @@ public class LDL_Ops_TestCases {
 									    Thread.sleep(5000);   
 						           driver.switchTo().window(parentWindow);	 
 						           driver.switchTo().frame(((FindsByName)driver).findElementByName("SabaMain"));
-						           
-						           //Requestor can only submit to LAS as required. 
-								   /*CUtilities.clickButton(p.getProperty("offeringsSubmitToLASButton"), driver);
+						         
+						           //Submit to LAS can be done only by Requestor
+						         
+								 /*  CUtilities.clickButton(p.getProperty("offeringsSubmitToLASButton"), driver);
 								   Thread.sleep(2000);
 								   CUtilities.clickButton(p.getProperty("submitToLASCancelButton"), driver);
 								   Thread.sleep(2000);
