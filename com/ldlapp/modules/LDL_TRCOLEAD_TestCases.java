@@ -96,7 +96,7 @@ public class LDL_TRCOLEAD_TestCases {
 		//LDLfirstAction();
 	    //LDLsearchRequestverification("LDL_TRCOLEADsearchRequestverification");
 		//LDLHomePageVerification("LDL_TRCOLEAD_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
-		LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTRCOLEAD_CreateNewCourseAndOfferingsInstructorLedVerification");
+		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTRCOLEAD_CreateNewCourseAndOfferingsInstructorLedVerification");
 		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_TRCOLEADCreateNewCourseAndOfferingsWBTVerification");
 		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_TRCOLEADCreateNewCourseAndOfferingsVODVerification");
 		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_TRCOLEAD_CreateNewCourseAndOfferingsEPEVerification");
@@ -109,13 +109,13 @@ public class LDL_TRCOLEAD_TestCases {
 		//LDLCancelExistingEMSOfferingRequestVerification("LDL_TRCOLEAD_CancelExistingEMSOfferingRequestVerification");
 		//LDLcreateNewOfferingRequestVerification("LDL_TRCOLEAD_createNewOfferingRequestVerification");
 	    //LDLUpdateExistingEMSOfferingRequestVerification("LDL_TRCOLEAD_UpdateExistingEMSOfferingRequestVerification");
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItemsVerification");
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_CancelRequest_Verification");
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_SubmitToEMS_Verification"); /*If the request is of type other than 'Other Las Request' */
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_ReturnRequest_Verification");
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_AssignRequest_Verification");
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_SetupComplete_Verification"); 
-		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_CompleteRequest_Verification"); /*--Setup Complete Data is taking a lot of time to reflect in the table becuase of which testcase failing.--*/
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItemsVerification"); /*LAS TRCOLEAD Cant perform TakeOwnerShip */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_CancelRequest_Verification"); /*LAS TRCOLEAD Cant cancel request */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_SubmitToEMS_Verification"); /*LAS TRCOLEAD Cant SubmitToEMS request */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_ReturnRequest_Verification"); /*LAS TRCOLEAD Cant Return request */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_AssignRequest_Verification"); /*LAS TRCOLEAD Cant Assign request */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_SetupComplete_Verification"); /*LAS TRCOLEAD Cant Setupcomplete request */
+		//LDLActionItemsVerification("LDL_TRCOLEADActionItems_CompleteRequest_Verification"); /*LAS TRCOLEAD Cant complete request */
 	}
 	 
 	public void LDLfirstAction() throws Exception{
