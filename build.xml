@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	 <project name="LDL_Application_Automation (Default - )" default="main" basedir=".">
 	 	 <!-- define properties -->
-	 	<property name="prop1" value="false"/>	
+	 	<property name="testFailed" value="false"/>	
 	 	
 	 <!--Define Path-->
 	 <path id="project-classpath">
@@ -33,13 +33,21 @@
 	              </taskdef>
 	 <!--Execute TestNG testsuite -->
 	            <target name ="run">
-	             <testng outputdir="./test-output" classpathref="project-classpath"  useDefaultListeners="true" haltOnfailure="true" failureproperty="prop1" >
+	             <testng outputdir="./test-output" classpathref="project-classpath"  useDefaultListeners="true" failureproperty="testFailed" >
 	       <xmlfileset dir="." includes="SelAutomationFlowTestNg.xml"/>
 	               <!-- generate report title -->
 	                <sysproperty key="org.uncommons.reportng.title" value="Test Automation"/>
 	                <sysproperty key="org.uncommons.reportng.escape-output" value="false"/>
 	               </testng>
-	            	<fail message="Some of the unit tests failed." />
+
+	            	  <fail message="Some of the  testcases failed.">
+	            	     <condition property="testFailed">
+	            	      
+	            	         <isTrue value="true"/>
+	            	      
+	            	     </condition>
+	            	   </fail>
+
 	            </target>
 	 </project>
 
