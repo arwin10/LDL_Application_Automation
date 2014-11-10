@@ -30,7 +30,7 @@
 	              </taskdef>
 	 <!--Execute TestNG testsuite -->
 	            <target name ="run">
-	             <testng outputdir="./test-output" classpathref="project-classpath"  useDefaultListeners="true" failonerror="true" >
+	             <testng outputdir="./test-output" classpathref="project-classpath"  useDefaultListeners="true" haltOnfailure="true">
 	       <xmlfileset dir="." includes="SelAutomationFlowTestNg.xml"/>
 	               <!-- generate report title -->
 	                <sysproperty key="org.uncommons.reportng.title" value="Test Automation"/>
