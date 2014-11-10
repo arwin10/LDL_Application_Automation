@@ -72,6 +72,7 @@ public class LDL_TRCOLEAD_TestCases {
 		dbmoduleRecord=(ArrayList)moduleRecord.get(0);
 	    p=(Properties)moduleRecord.get(1);
 	    driver=(WebDriver)moduleRecord.get(2);
+	   
 	  
 	}
 	
@@ -85,7 +86,9 @@ public class LDL_TRCOLEAD_TestCases {
 	 if(success_flag==1)
 	 System.out.println("Script Executed Successfully.");
 	 else
-	 System.out.println("Script Execution failed.");
+	 {System.out.println("Script Execution failed.");
+	  System.setProperty("prop1","true");
+	 }
 	}
 	
 	
