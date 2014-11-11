@@ -38,12 +38,14 @@
 	               <!-- generate report title -->
 	                <sysproperty key="org.uncommons.reportng.title" value="Test Automation"/>
 	                <sysproperty key="org.uncommons.reportng.escape-output" value="false"/>
-	               </testng>
-
+	             	        	  
+	             </testng>
+	        
+	            <!--	<echo> ${testFailed} </echo> -->
 	            	  <fail message="Some of the  testcases failed.">
-	            	     <condition property="testFailed">
+	            	     <condition >
 	            	      
-	            	         <isTrue value="true"/>
+	            	         <isTrue value="${testFailed}"/>
 	            	      
 	            	     </condition>
 	            	   </fail>

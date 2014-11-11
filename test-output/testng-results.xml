@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="155588" started-at="2014-11-10T16:04:23Z" finished-at="2014-11-10T16:06:58Z">
+  <suite name="Suite" duration-ms="272335" started-at="2014-11-11T11:08:28Z" finished-at="2014-11-11T11:13:00Z">
     <groups>
     </groups>
-    <test name="TRCOLEAD_FirefoxTest" duration-ms="155588" started-at="2014-11-10T16:04:23Z" finished-at="2014-11-10T16:06:58Z">
+    <test name="TRCOLEAD_FirefoxTest" duration-ms="272335" started-at="2014-11-11T11:08:28Z" finished-at="2014-11-11T11:13:00Z">
       <class name="com.ldlapp.modules.LDL_TRCOLEAD_TestCases">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="setUp" is-config="true" duration-ms="132847" started-at="2014-11-10T21:34:23Z" finished-at="2014-11-10T21:36:35Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="setUp" is-config="true" duration-ms="133473" started-at="2014-11-11T16:38:28Z" finished-at="2014-11-11T16:40:41Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="testCaseExecution" duration-ms="22536" started-at="2014-11-10T21:36:35Z" finished-at="2014-11-10T21:36:58Z">
+        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="testCaseExecution" duration-ms="138642" started-at="2014-11-11T16:40:41Z" finished-at="2014-11-11T16:43:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseExecution -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="tearDown" is-config="true" duration-ms="192" started-at="2014-11-10T21:36:58Z" finished-at="2014-11-10T21:36:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@254ce181]" name="tearDown" is-config="true" duration-ms="206" started-at="2014-11-11T16:43:00Z" finished-at="2014-11-11T16:43:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
