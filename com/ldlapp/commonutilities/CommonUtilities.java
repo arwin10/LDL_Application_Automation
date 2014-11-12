@@ -207,7 +207,7 @@ public class CommonUtilities {
 		    	    	
 		    	       });
 
-			if(elementimage.isDisplayed()){
+			if(elementimage.isDisplayed() ){
 				elementimage.click();
 			}
 			else

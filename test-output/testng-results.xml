@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="280704" started-at="2014-11-12T09:39:49Z" finished-at="2014-11-12T09:44:30Z">
+  <suite name="Suite" duration-ms="147954" started-at="2014-11-12T11:23:45Z" finished-at="2014-11-12T11:26:13Z">
     <groups>
     </groups>
-    <test name="TRCOLEAD_FirefoxTest" duration-ms="280704" started-at="2014-11-12T09:39:49Z" finished-at="2014-11-12T09:44:30Z">
-      <class name="com.ldlapp.modules.LDL_TRCOLEAD_TestCases">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@5a68ef48]" name="setUp" is-config="true" duration-ms="136758" started-at="2014-11-12T15:09:49Z" finished-at="2014-11-12T15:12:06Z">
+    <test name="TC_ChromeTest" duration-ms="147954" started-at="2014-11-12T11:23:45Z" finished-at="2014-11-12T11:26:13Z">
+      <class name="com.ldlapp.modules.LDL_TC_TestCases">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.ldlapp.modules.LDL_TC_TestCases@254ce181]" name="setUp" is-config="true" duration-ms="134763" started-at="2014-11-12T16:53:45Z" finished-at="2014-11-12T16:56:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@5a68ef48]" name="testCaseExecution" duration-ms="143740" started-at="2014-11-12T15:12:06Z" finished-at="2014-11-12T15:14:30Z">
+        <test-method status="PASS" signature="testCaseExecution()[pri:0, instance:com.ldlapp.modules.LDL_TC_TestCases@254ce181]" name="testCaseExecution" duration-ms="13160" started-at="2014-11-12T16:56:00Z" finished-at="2014-11-12T16:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseExecution -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_TRCOLEAD_TestCases@5a68ef48]" name="tearDown" is-config="true" duration-ms="198" started-at="2014-11-12T15:14:30Z" finished-at="2014-11-12T15:14:30Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ldlapp.modules.LDL_TC_TestCases@254ce181]" name="tearDown" is-config="true" duration-ms="5" started-at="2014-11-12T16:56:13Z" finished-at="2014-11-12T16:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ldlapp.modules.LDL_TRCOLEAD_TestCases -->
-    </test> <!-- TRCOLEAD_FirefoxTest -->
+      </class> <!-- com.ldlapp.modules.LDL_TC_TestCases -->
+    </test> <!-- TC_ChromeTest -->
   </suite> <!-- Suite -->
 </testng-results>

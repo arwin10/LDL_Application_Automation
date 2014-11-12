@@ -50,8 +50,15 @@
       </classes>
    </test> -->
    
- <test name="TC_FirefoxTest">
+ <!-- <test name="TC_FirefoxTest">
       <parameter name="browserName" value="Firefox" />
+      <classes>
+             <class name="com.ldlapp.modules.LDL_TC_TestCases"/>
+      </classes>
+   </test> -->
+   
+   <test name="TC_ChromeTest">
+      <parameter name="browserName" value="Chrome" />
       <classes>
              <class name="com.ldlapp.modules.LDL_TC_TestCases"/>
       </classes>
