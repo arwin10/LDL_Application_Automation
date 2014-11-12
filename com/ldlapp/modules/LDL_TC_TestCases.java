@@ -96,7 +96,7 @@ public class LDL_TC_TestCases {
 		//LDLfirstAction();
 	    //LDLsearchRequestverification("LDL_TCsearchRequestverification");
 		//LDLHomePageVerification("LDL_TC_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
-		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTC_CreateNewCourseAndOfferingsInstructorLedVerification");
+		LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTC_CreateNewCourseAndOfferingsInstructorLedVerification");
 		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_TCCreateNewCourseAndOfferingsWBTVerification");
 		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_TCCreateNewCourseAndOfferingsVODVerification");
 		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_TC_CreateNewCourseAndOfferingsEPEVerification");

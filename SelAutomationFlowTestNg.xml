@@ -50,12 +50,12 @@
       </classes>
    </test> -->
    
- <!-- <test name="TC_FirefoxTest">
+ <test name="TC_FirefoxTest">
       <parameter name="browserName" value="Firefox" />
       <classes>
              <class name="com.ldlapp.modules.LDL_TC_TestCases"/>
       </classes>
-   </test> --> 
+   </test> 
    
   <!-- <test name="Requestor_FirefoxTest">
       <parameter name="browserName" value="Firefox" />
@@ -92,12 +92,12 @@
       </classes>
    </test> -->
    
- <test name="TRCOLEAD_FirefoxTest">
+<!-- <test name="TRCOLEAD_FirefoxTest">
       <parameter name="browserName" value="Firefox" />
       <classes>
              <class name="com.ldlapp.modules.LDL_TRCOLEAD_TestCases"/>
       </classes>
-   </test>  
+   </test>  -->
       
    
  <!--  <test name="IETest">

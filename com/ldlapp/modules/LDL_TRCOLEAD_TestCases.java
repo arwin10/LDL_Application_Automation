@@ -102,8 +102,8 @@ public class LDL_TRCOLEAD_TestCases {
 		System.out.println("--Inside testCaseExecution function--");
 		//LDLfirstAction();
 	    //LDLsearchRequestverification("LDL_TRCOLEADsearchRequestverification");
-		LDLHomePageVerification("LDL_TRCOLEAD_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
-		//LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTRCOLEAD_CreateNewCourseAndOfferingsInstructorLedVerification");
+		//LDLHomePageVerification("LDL_TRCOLEAD_HomePageVerification"); /*Issue with Tab scrolling Because of this Testcase failing.*/
+		LDLCreateNewCourseAndOfferingsInstructorLedVerification("LDLTRCOLEAD_CreateNewCourseAndOfferingsInstructorLedVerification");
 		//LDLCreateNewCourseAndOfferingsWBTVerification("LDL_TRCOLEADCreateNewCourseAndOfferingsWBTVerification");
 		//LDLCreateNewCourseAndOfferingsVODVerification("LDL_TRCOLEADCreateNewCourseAndOfferingsVODVerification");
 		//LDLCreateNewCourseAndOfferingsEPEVerification("LDL_TRCOLEAD_CreateNewCourseAndOfferingsEPEVerification");
