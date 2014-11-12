@@ -141,12 +141,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;TC_ChromeTest&quot;&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;test name=&quot;TC_FirefoxTest&quot;&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;Firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.ldlapp.modules.LDL_TC_TestCases&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC_ChromeTest --&gt;
+  &lt;/test&gt; &lt;!-- TC_FirefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +158,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TC_ChromeTest (1 class)</span>
+                <span class="test-name">TC_FirefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,12 +188,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testCaseExecution')
 data.setCell(0, 2, 'com.ldlapp.modules.LDL_TC_TestCases')
-data.setCell(0, 3, 13160);
+data.setCell(0, 3, 19158);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,16 +221,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.ldlapp.modules.LDL_TC_TestCases</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(Chrome)</span>
+                <span class="method-name">setUp(Firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">testCaseExecution</span>
-                <span class="method-start">134787 ms</span>
+                <span class="method-start">133899 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">147948 ms</span>
+                <span class="method-start">153059 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
